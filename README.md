@@ -12,13 +12,25 @@ Step 1: Clone the repo
 git clone https://github.com/mkeles17/event-log-service-with-express-pubsub-bigquery.git
 ```
 
-Step 2: cd into the cloned repo and run:
+#### To run the project as a docker container
+
+(Optional) Step 2: cd into the cloned repo and run:
 
 ```bash
 docker-compose up
 ```
 
+#### To run the project with node
+
+(Optional) Step 2: cd into the cloned repo and run:
+
+```bash
+npm start
+```
+
 API is ready to use on port 3000!
+
+** This API makes posts/queries to a table from the dataset at BigQuery which is owned by me. In order to integrate this api to your own Google Cloud Project  
 
 #### API Documentation
 
