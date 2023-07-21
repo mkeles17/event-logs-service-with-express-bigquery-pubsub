@@ -17,7 +17,7 @@ git clone https://github.com/mkeles17/event-logs-service-with-express-bigquery-p
 (Optional) Step 2: cd into the cloned repo and run:
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 #### To run the project with node
