@@ -31,9 +31,9 @@ npm start
 API is ready to use on port 3000!
 
 **This API makes queries from/to a table from the dataset at BigQuery which is owned by me. It also uses Pub/Sub for transfering data to the table. In order to integrate this api to your own Google Cloud Project you should 
--create your own dataset and table AND update environmental variable DATASET_TABLE_ID accordingly,  
--create your own pub/sub schema, topic and bigQuery subscriptions AND update environmental variable TOPIC_ID accordingly.
--generate your own key.json with the related service account that has authorization for Pub/Sub Client and BigQuery Client AND replace it with the existing one.
+ -create your own dataset and table AND update environmental variable DATASET_TABLE_ID accordingly,  
+ -create your own pub/sub schema, topic and bigQuery subscriptions AND update environmental variable TOPIC_ID accordingly.
+ -generate your own key.json with the related service account that has authorization for Pub/Sub Client and BigQuery Client AND replace it with the existing one.
 -**
 
 *Port and api root can also be changed if desired, by changing the related environmental variables.*
