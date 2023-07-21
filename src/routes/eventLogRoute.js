@@ -10,4 +10,6 @@ router.get('/event-logs', makeCallback(eventLogController.getResults));
 //Post the event log 
 router.post('/event-logs', makeCallback(eventLogController.postEventLog));
 
+router.use(makeCallback(eventLogController.notFound));
+
 module.exports = router;
