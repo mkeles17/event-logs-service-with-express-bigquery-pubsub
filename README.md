@@ -40,7 +40,9 @@ API is ready to use on port 3000!
 
 #### API Documentation
 
-POST - /api/event-logs/ -> posts the event log data given in the RequestBody to the related BigQuery table. The restrictions are as follows:
+***BASE_URL=http://localhost:3000***
+
+**POST** - /api/event-logs/ -> posts the event log data given in the RequestBody to the related BigQuery table. The restrictions are as follows:
 
 * An event log **must** have 
     - a type *as string*,
@@ -69,7 +71,7 @@ Here is a sample valid RequestBody:
     "user_id": "Uu1qJzlfrxYxOS5z1kfAbmSA5pF2"
     }
 
-GET - /api/eventlogs/ -> gets the aggregated results retrieved from BigQuery. It includes "total user count", "daily active user count", "daily new users" and "daily average session duration in seconds".
+**GET** - /api/event-logs/ -> gets the aggregated results retrieved from BigQuery. It includes "total user count", "daily active user count", "daily new users" and "daily average session duration in seconds".
 
 Here is a sample get response:
 
