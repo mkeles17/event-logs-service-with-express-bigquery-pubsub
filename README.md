@@ -1,4 +1,4 @@
-# Event Logs Service with Node.js Google BigQuery and Google Pub/Sub
+# Event Logs Service with Node.js, Google BigQuery, and Google Pub/Sub
 
 This is a small data pipline web service for the anonymous post and get operations on event logs data with *Node.js*, *Google BigQuery*, and *Google Pub/Sub* following the **Clean Architecture principles**.
 
