@@ -24,7 +24,7 @@ API is ready to use on port 3000!
 
 POST - /api/eventlogs/ -> posts the event log data given in the RequestBody to the related BigQuery table. The restrictions are as follows:
 
-* An event log book **must** have 
+* An event log **must** have 
     - a type *as string*,
     - a session_id *as string*,
     - an event_name *as string*,
