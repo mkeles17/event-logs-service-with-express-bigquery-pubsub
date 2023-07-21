@@ -14,11 +14,9 @@ module.exports = function makePubSub ({ pubSubClient }) {
         console.log(`Message ${messageId} published.`);
         return { 
             success: true,
-            message: 'Event Log succeded.' 
+            message: 'Event Log was successfully posted.' 
         };
       } catch (error) {
-        console.error(`Received error while publishing: ${error.message}`);
-        process.exitCode = 1;
         return { 
             success: false,
             message: error.message 
