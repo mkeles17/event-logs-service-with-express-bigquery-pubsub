@@ -1,5 +1,5 @@
 
-const makeEventLog = require("../models/eventLog.js");
+const makeEventLog = require("../entities/eventLog.js");
 
 module.exports = function makeCreateEventLog ({ pubSub }) {
     return async function createEventLog (eventLogInfo) {
