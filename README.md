@@ -9,7 +9,7 @@ This is a small data pipline web service for the anonymous post and get operatio
 Step 1: Clone the repo
 
 ```bash
-git clone https://github.com/mkeles17/event-logs-service-with-express-pubsub-bigquery.git
+git clone https://github.com/mkeles17/event-logs-service-with-express-bigquery-pubsub.git
 ```
 
 #### To run the project as a docker container
