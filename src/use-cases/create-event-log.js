@@ -20,29 +20,5 @@ module.exports = function makeCreateEventLog ({ pubSub }) {
       const dataBuffer = Buffer.from(JSON.stringify(data));
       
       return pubSub.publish({dataBuffer});
-      /*
-      
-      const topicNameOrId = 'projects/event-log-servic-1689702608739/topics/event-logs';
-
-      const pubSubClient = new PubSub();
-
-      try {
-        const messageId = await pubSubClient
-          .topic(topicNameOrId)
-          .publishMessage({data: dataBuffer});
-        console.log(`Message ${messageId} published.`);
-        return { 
-          success: true,
-          message: 'Event Log succeded.' 
-        };
-      } catch (error) {
-        console.error(`Received error while publishing: ${error.message}`);
-        process.exitCode = 1;
-        return { 
-          success: false,
-          message: 'Event Log failed.' 
-        };
-      }
-      */
     }
   }
