@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd src && GOOGLE_APPLICATION_CREDENTIALS=\"./key.json\" node app.js"
+    "start": "npm install && cd src && GOOGLE_APPLICATION_CREDENTIALS=\"./key.json\" node app.js"
   },
   "author": "Mehmet Kutay Keleş",
   "license": "ISC",
