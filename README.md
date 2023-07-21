@@ -6,7 +6,7 @@ This is a small data pipline web service for the anonymous post and get operatio
 
 #### To start setting up the project
 
-Step 1: Clone the repo
+Step 1: Clone the repo into your desired directory with the following command: 
 
 ```bash
 git clone https://github.com/mkeles17/event-logs-service-with-express-bigquery-pubsub.git
