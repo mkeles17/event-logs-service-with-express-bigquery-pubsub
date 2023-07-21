@@ -40,7 +40,7 @@ API is ready to use on port 3000!
 
 #### API Documentation
 
-POST - /api/eventlogs/ -> posts the event log data given in the RequestBody to the related BigQuery table. The restrictions are as follows:
+POST - /api/event-logs/ -> posts the event log data given in the RequestBody to the related BigQuery table. The restrictions are as follows:
 
 * An event log **must** have 
     - a type *as string*,
