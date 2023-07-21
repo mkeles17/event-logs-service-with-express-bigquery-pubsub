@@ -38,7 +38,7 @@ API is ready to use on port 3000!
 *Port and api root can also be changed if desired, by changing the related environmental variables.*
 
 
-#### API Documentation
+### API Documentation
 
 ***BASE_URL=http://localhost:3000***
 
