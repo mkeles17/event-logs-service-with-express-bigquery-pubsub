@@ -18,14 +18,11 @@ module.exports = function makeBigQuery ({ bigQueryClient }) {
         query: sqlQuery,
         // Location must match that of the dataset(s) referenced in the query.
         location: 'EU',
-        //params: {type: 'kutay2'},
        };
 
        // Run the query
        const [rows] = await bigQueryClient.query(options);
 
-       //console.log('Rows:');
-       //rows.forEach(row => console.log(row));
        return rows[0].total_user_count;
 
     }
@@ -89,7 +86,6 @@ module.exports = function makeBigQuery ({ bigQueryClient }) {
         query: sqlQuery,
         // Location must match that of the dataset(s) referenced in the query.
         location: 'EU',
-        //params: {type: 'kutay2'},
        };
 
        // Run the query
