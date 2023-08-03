@@ -30,11 +30,18 @@ module.exports = function makeBigQuery ({ bigQueryClient }) {
     async function getDailyStats() {
       
       const sqlQuery = 
-        `WITH daily_active_users AS (
+        `WITH event_logs_data AS (
+          SELECT
+            *,
+            DATE(TIMESTAMP_SECONDS(event_time)) AS date
+          FROM ${process.env.DATASET_TABLE_ID}
+        ),
+        
+        daily_active_users AS (
           SELECT
             date,
             COUNT(DISTINCT user_id) AS active_user_count
-          FROM ${process.env.DATASET_TABLE_ID}
+          FROM event_logs_data
           GROUP BY date
         ),
         
@@ -46,7 +53,7 @@ module.exports = function makeBigQuery ({ bigQueryClient }) {
             SELECT
               user_id,
               MIN(date) as MinDate
-            FROM ${process.env.DATASET_TABLE_ID}
+            FROM event_logs_data
             GROUP BY user_id
           ) 
           GROUP BY date
@@ -57,7 +64,7 @@ module.exports = function makeBigQuery ({ bigQueryClient }) {
             session_id,
             date,
             MAX(event_time) - MIN(event_time) AS session_duration_seconds
-          FROM ${process.env.DATASET_TABLE_ID}
+          FROM event_logs_data
           GROUP BY session_id, date
         ),
         
@@ -75,7 +82,7 @@ module.exports = function makeBigQuery ({ bigQueryClient }) {
           COALESCE(d.active_user_count, 0) AS active_user_count,
           COALESCE(n.new_user_count, 0) AS new_user_count,
         FROM
-          ${process.env.DATASET_TABLE_ID} e
+          event_logs_data e
         LEFT JOIN daily_active_users d ON e.date = d.date
         LEFT JOIN daily_new_users n ON e.date = n.date
         LEFT JOIN daily_average_session_duration a ON e.date = a.date
