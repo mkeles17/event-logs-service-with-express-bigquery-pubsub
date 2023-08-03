@@ -14,8 +14,7 @@ module.exports = function makeCreateEventLog ({ pubSub }) {
         "country": eventLog.getCountry(),
         "region": eventLog.getRegion(),
         "city": eventLog.getCity(),
-        "user_id": eventLog.getUserID(),
-        "date": currentDate.toISOString().split('T')[0]
+        "user_id": eventLog.getUserID()
       };
       const dataBuffer = Buffer.from(JSON.stringify(data));
       
